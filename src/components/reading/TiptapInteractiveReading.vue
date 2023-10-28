@@ -1,17 +1,11 @@
 <template>
-  <node-view-wrapper
-    class="vue-component ma-4"
-    data-drag-handle
-  >
-    <span
-      class="label"
-      contenteditable="false"
-    >Not shown in konkoor view</span>
+  <node-view-wrapper class="vue-component ma-4"
+                     data-drag-handle>
+    <span class="label"
+          contenteditable="false">Not shown in konkoor view</span>
     <div>
-      <node-view-content
-        class="content"
-        dir="auto"
-      />
+      <node-view-content class="content"
+                         dir="auto" />
     </div>
   </node-view-wrapper>
 </template>
@@ -19,15 +13,15 @@
 <script>
 // eslint-disable-next-line no-unused-vars
 import { NodeViewWrapper, NodeViewContent, nodeViewProps } from '@tiptap/vue-3'
-import MixinComponentReading from 'vue-tiptap-katex-core/components/reading/mixin'
+import { MixinComponentReading } from 'vue-tiptap-katex-core'
 
 export default {
   name: 'TiptapInteractiveReading',
-  mixins: [MixinComponentReading],
   components: {
     NodeViewWrapper,
-    NodeViewContent,
+    NodeViewContent
   },
+  mixins: [MixinComponentReading]
 }
 </script>
 

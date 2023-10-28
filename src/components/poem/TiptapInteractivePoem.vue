@@ -1,27 +1,23 @@
 <template>
-  <node-view-wrapper
-    class="poem ma-4"
-    data-drag-handle
-  >
-    <node-view-content
-      class="content"
-      dir="auto"
-    />
+  <node-view-wrapper class="poem ma-4"
+                     data-drag-handle>
+    <node-view-content class="content"
+                       dir="auto" />
   </node-view-wrapper>
 </template>
 
 <script>
 // eslint-disable-next-line no-unused-vars
 import { NodeViewWrapper, NodeViewContent, nodeViewProps } from '@tiptap/vue-3'
-import MixinComponentPoem from 'vue-tiptap-katex-core/components/poem/mixin'
+import { MixinComponentPoem } from 'vue-tiptap-katex-core'
 
 export default {
   name: 'TiptapInteractivePoem',
   components: {
     NodeViewWrapper,
-    NodeViewContent,
+    NodeViewContent
   },
-  mixins: [MixinComponentPoem],
+  mixins: [MixinComponentPoem]
 }
 </script>
 
